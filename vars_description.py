@@ -1,4 +1,4 @@
-columns_desc = {
+vars_desc = {
     'ID': 'Identifiant unique pour chaque entrée',
     'DAY_ID': 'Date de l\'entrée sous forme numérique',
     'COUNTRY': 'Pays concerné par l\'entrée - DE = Allemagne, FR = France',
@@ -36,4 +36,8 @@ columns_desc = {
     'CARBON_RET': 'Prix journalier des émissions de carbone en Europe',
     'TARGET': 'Variation journalière du prix de futures d\'électricité (maturité 24h)',
 }
+
+x_vars_desc = {k:v for k,v in vars_desc.items() if k != 'TARGET'}
+
+y_vars_desc = {'ID': vars_desc['ID'], 'TARGET': vars_desc['TARGET']}
 
