@@ -1,0 +1,99 @@
+Summary :
+
+Linear model:
+   Best transformers:
+      imputer           : SimpleImputer
+      feature_selection : PolynomialFeatures
+      scaler            : StandardScaler
+      model             : LinearRegression
+   Best parameters: 
+      'imputer__fill_value': None,
+      'imputer__strategy': 'mean',
+      'model__fit_intercept': False
+   Best cross-validation score: 0.06378
+   Spearman correlation       : 0.06378
+   R2 score                   : -1.42952894
+   RMSE                       : -1.5816
+
+Ridge model:
+   Best transformers:
+      imputer           : SimpleImputer
+      feature_selection : PolynomialFeatures
+      scaler            : StandardScaler
+      model             : Ridge
+   Best parameters: 
+      'imputer__fill_value': None,
+      'imputer__strategy': 'median',
+      'model__alpha': 1000.0
+   Best cross-validation score: 0.12404
+   Spearman correlation       : 0.12404
+   R2 score                   : -0.01995556
+   RMSE                       : -1.0277
+
+Lasso model:
+   Best transformers:
+      imputer           : SimpleImputer
+      feature_selection : PolynomialFeatures
+      scaler            : StandardScaler
+      model             : Lasso
+   Best parameters: 
+      'imputer__fill_value': None,
+      'imputer__strategy': 'median',
+      'model__alpha': 0.0517947467923121
+   Best cross-validation score: 0.19441
+   Spearman correlation       : 0.19441
+   R2 score                   : 0.03182257
+   RMSE                       : -1.0010
+
+Knn model:
+   Best transformers:
+      imputer           : SimpleImputer
+      feature_selection : No
+      scaler            : SelectKBest(score_func=<function f_regression at 0x000001F52EE6E670
+      model             : KNeighborsRegressor
+   Best parameters: 
+      'imputer__fill_value': None,
+      'imputer__strategy': 'constant',
+      'model__metric': 'manhattan',
+      'model__n_neighbors': 15,
+      'model__weights': 'uniform',
+      'scaler__k': 10
+   Best cross-validation score: 0.15265
+   Spearman correlation       : 0.15265
+   R2 score                   : -0.00316807
+   RMSE                       : -1.0190
+
+Decision_tree model:
+   Best transformers:
+      imputer           : SimpleImputer
+      feature_selection : PolynomialFeatures
+      scaler            : StandardScaler
+      model             : DecisionTreeRegressor
+   Best parameters: 
+      'imputer__fill_value': None,
+      'imputer__strategy': 'median',
+      'model__max_depth': 3,
+      'model__min_samples_leaf': 3,
+      'model__min_samples_split': 8
+   Best cross-validation score: 0.15701
+   Spearman correlation       : 0.15701
+   R2 score                   : -0.07058724
+   RMSE                       : -1.0520
+
+Random_forest model:
+   Best transformers:
+      imputer           : SimpleImputer
+      feature_selection : No
+      scaler            : SelectKBest(score_func=<function f_regression at 0x000001F52EE6E670
+      model             : RandomForestRegressor(n_jobs=-
+   Best parameters: 
+      'imputer__fill_value': None,
+      'imputer__strategy': 'median',
+      'model__max_depth': 3,
+      'model__n_estimators': 10,
+      'scaler__k': 10
+   Best cross-validation score: 0.20336
+   Spearman correlation       : 0.20336
+   R2 score                   : 0.01488426
+   RMSE                       : -1.0095
+
